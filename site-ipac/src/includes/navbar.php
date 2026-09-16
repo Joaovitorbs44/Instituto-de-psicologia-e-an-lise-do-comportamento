@@ -26,67 +26,155 @@ $itensNavbar = require __DIR__ . '/../config/menu.php';
 </div>
 
 <header class="relative h-20 lg:h-24 border-b border-gray-100 bg-white">
-  
-  <div class="h-full flex items-center px-4 sm:px-6 md:px-10 lg:px-[68px]">
 
-    <!-- LOGO -->
-    <a
-      href="#inicio"
-      aria-label="IPAC — início"
-      class="shrink-0"
+  <!-- MESMO GRID 50/50 DA HERO -->
+  <div class="grid grid-cols-2 h-full">
+
+    <!-- =========================
+         LADO ESQUERDO
+    ========================== -->
+    <div
+      class="
+        flex
+        items-center
+        justify-start
+        px-4
+        sm:px-6
+        md:px-10
+        lg:px-[68px]
+      "
     >
-      <img
-        src="/assets/images/LogoIpac_02.svg"
-        alt="IPAC"
-        class="h-7 sm:h-8 lg:h-9"
-      />
-    </a>
+
+      <a
+        href="#inicio"
+        aria-label="IPAC — início"
+        class="shrink-0"
+      >
+        <img
+          src="/assets/images/LogoIpac_02.svg"
+          alt="IPAC"
+          class="h-7 sm:h-8 lg:h-9 w-auto"
+        />
+      </a>
+
+    </div>
 
 
-    <!-- MENU CENTRALIZADO DE VERDADE -->
-    <nav
-      aria-label="Navegação principal"
-      class="hidden xl:flex absolute left-1/2 -translate-x-1/2 items-center gap-6"
+    <!-- =========================
+         LADO DIREITO
+    ========================== -->
+    <div
+      class="
+        flex
+        items-center
+        justify-end
+        px-4
+        sm:px-6
+        md:px-10
+        lg:px-[68px]
+      "
     >
-      <?php foreach ($itensNavbar as $item) { ?>
 
-        <a
-          href="<?= htmlspecialchars($item['link'], ENT_QUOTES, 'UTF-8') ?>"
-          class="text-sm whitespace-nowrap text-neutral-800 hover:text-[#9aaa00] transition duration-200"
-        >
-          <?= $item['nome'] ?>
-        </a>
+      <a
+        href="https://wa.me/554391639815"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="
+          hidden
+          xl:flex
+          shrink-0
+          items-center
+          gap-2
+          text-xs
+          text-white
+          font-medium
+          px-5
+          py-2.5
+          rounded-lg
+          bg-gradient-to-r
+          from-[#687237]
+          to-[#d1e254]
+        "
+      >
 
-      <?php } ?>
-    </nav>
+        <?= icon('whatsapp', 16) ?>
+
+        Agendar
+
+      </a>
 
 
-    <!-- AGENDAR -->
-    <a
-      href="https://wa.me/554391639815"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hidden xl:flex ml-auto shrink-0 items-center gap-2 text-xs text-white font-medium px-5 py-2 rounded-lg bg-gradient-to-r from-[#687237] to-[#d1e254]"
-    >
-      <?= icon('whatsapp', 16) ?>
+      <!-- MOBILE -->
+      <button
+        type="button"
+        id="menuButton"
+        aria-label="Abrir menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+        class="
+          xl:hidden
+          inline-flex
+          items-center
+          justify-center
+          min-h-11
+          min-w-11
+          rounded-lg
+          border
+          border-gray-100
+        "
+      >
 
-      Agendar
-    </a>
+        <?= icon('bars', 24, 'text-[#9aaa00]') ?>
 
+      </button>
 
-    <!-- MOBILE -->
-    <button
-      type="button"
-      class="xl:hidden ml-auto inline-flex items-center justify-center min-h-11 min-w-11 rounded-lg border border-gray-100"
-      id="menuButton"
-      aria-label="Abrir menu"
-      aria-controls="mobileMenu"
-      aria-expanded="false"
-    >
-      <?= icon('bars', 24, 'text-[#9aaa00]') ?>
-    </button>
+    </div>
 
   </div>
+
+
+  <!-- =========================
+       NAVBAR CENTRAL
+  ========================== -->
+
+  <nav
+    aria-label="Navegação principal"
+    class="
+      hidden
+      xl:flex
+      absolute
+      left-1/2
+      top-1/2
+      -translate-x-1/2
+      -translate-y-1/2
+      items-center
+      gap-6
+    "
+  >
+
+    <?php foreach ($itensNavbar as $item) { ?>
+
+      <a
+        href="<?= htmlspecialchars(
+          $item['link'],
+          ENT_QUOTES,
+          'UTF-8'
+        ) ?>"
+        class="
+          text-sm
+          whitespace-nowrap
+          text-neutral-800
+          hover:text-[#9aaa00]
+          transition
+          duration-200
+        "
+      >
+        <?= $item['nome'] ?>
+      </a>
+
+    <?php } ?>
+
+  </nav>
 
 </header>
 

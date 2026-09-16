@@ -17,7 +17,7 @@
 
       <a href="#inicio" class="inline-flex items-center justify-center lg:justify-start">
         <img
-          src="/assets/images/logoIpac_02.svg"
+          src="/assets/images/LogoIpac_02.svg"
           alt="IPAC"
           class="h-7 min-[375px]:h-8 w-auto" />
       </a>

@@ -26,71 +26,65 @@ $itensNavbar = require __DIR__ . '/../config/menu.php';
 </div>
 
 <header class="relative h-20 lg:h-24 border-b border-gray-100 bg-white">
+  
+  <div class="h-full flex items-center px-4 sm:px-6 md:px-10 lg:px-[68px]">
 
-  <div class="grid grid-cols-1 xl:grid-cols-2 h-full">
-
-    <!-- METADE ESQUERDA -->
-    <div class="flex items-center justify-between xl:justify-start px-4 min-[375px]:px-5 min-[425px]:px-6 md:px-10 lg:px-20">
-
-      <a
-        href="#inicio"
-        aria-label="IPAC — início"
-        class="shrink-0"
-      >
-        <img
-          src="/assets/images/LogoIpac_02.svg"
-          alt="IPAC"
-          class="h-7 sm:h-8 lg:h-9"
-        />
-      </a>
-
-      <!-- MOBILE -->
-      <button
-        type="button"
-        class="xl:hidden inline-flex items-center justify-center min-h-11 min-w-11 rounded-lg border border-gray-100"
-        id="menuButton"
-        aria-label="Abrir menu"
-        aria-controls="mobileMenu"
-        aria-expanded="false"
-      >
-        <?= icon('bars', 24, 'text-[#9aaa00]') ?>
-      </button>
-
-    </div>
+    <!-- LOGO -->
+    <a
+      href="#inicio"
+      aria-label="IPAC — início"
+      class="shrink-0"
+    >
+      <img
+        src="/assets/images/LogoIpac_02.svg"
+        alt="IPAC"
+        class="h-7 sm:h-8 lg:h-9"
+      />
+    </a>
 
 
-    <!-- METADE DIREITA -->
-    <div class="hidden xl:flex items-center justify-between gap-6 px-10 lg:px-20">
+    <!-- MENU CENTRALIZADO DE VERDADE -->
+    <nav
+      aria-label="Navegação principal"
+      class="hidden xl:flex absolute left-1/2 -translate-x-1/2 items-center gap-6"
+    >
+      <?php foreach ($itensNavbar as $item) { ?>
 
-      <nav
-        aria-label="Navegação principal"
-        class="flex items-center gap-6"
-      >
-        <?php foreach ($itensNavbar as $item) { ?>
+        <a
+          href="<?= htmlspecialchars($item['link'], ENT_QUOTES, 'UTF-8') ?>"
+          class="text-sm whitespace-nowrap text-neutral-800 hover:text-[#9aaa00] transition duration-200"
+        >
+          <?= $item['nome'] ?>
+        </a>
 
-          <a
-            href="<?= htmlspecialchars($item['link'], ENT_QUOTES, 'UTF-8') ?>"
-            class="text-sm whitespace-nowrap text-neutral-800 hover:text-[#9aaa00] transition duration-200"
-          >
-            <?= $item['nome'] ?>
-          </a>
-
-        <?php } ?>
-      </nav>
+      <?php } ?>
+    </nav>
 
 
-      <a
-        href="https://wa.me/554391639815"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex shrink-0 items-center gap-2 text-xs text-white font-medium px-5 py-2 rounded-lg bg-gradient-to-r from-[#687237] to-[#d1e254]"
-      >
-        <?= icon('whatsapp', 16) ?>
+    <!-- AGENDAR -->
+    <a
+      href="https://wa.me/554391639815"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden xl:flex ml-auto shrink-0 items-center gap-2 text-xs text-white font-medium px-5 py-2 rounded-lg bg-gradient-to-r from-[#687237] to-[#d1e254]"
+    >
+      <?= icon('whatsapp', 16) ?>
 
-        Agendar
-      </a>
+      Agendar
+    </a>
 
-    </div>
+
+    <!-- MOBILE -->
+    <button
+      type="button"
+      class="xl:hidden ml-auto inline-flex items-center justify-center min-h-11 min-w-11 rounded-lg border border-gray-100"
+      id="menuButton"
+      aria-label="Abrir menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
+      <?= icon('bars', 24, 'text-[#9aaa00]') ?>
+    </button>
 
   </div>
 

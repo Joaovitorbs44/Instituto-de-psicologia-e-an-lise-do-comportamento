@@ -2,7 +2,7 @@
 
   <div class="absolute inset-0 z-0 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-70"></div>
 
-  <div class="relative z-10 flex flex-col justify-center gap-6 sm:gap-8 px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-40 py-24">
+  <div class="relative z-10 flex flex-col justify-center gap-5 sm:gap-6 md:gap-8 px-5 sm:px-6 md:px-10 lg:px-12 xl:px-20 2xl:px-32 py-16 sm:py-20 md:py-24 lg:py-24">
 
     <h3 class="sm:text-[16px] md:text-[20px] lg:text-[24px] text-black font-cormorant leading-tight max-w-lg">
       Entenda seus comportamentos.

@@ -139,14 +139,17 @@ html {
    INSTAGRAM
 ========================= */
 
+/* 1. Força o iframe a ocupar a largura total e não colapsar a altura */
 .instagram-card iframe.instagram-media {
   min-width: 100%;
   max-width: 100%;
   width: 100%;
   min-height: 1400px;
+  /* Altura mínima necessária pro Instagram renderizar a legenda */
   margin: 0;
 }
 
+/* 2. Trava a altura do card no carrossel e libera a rolagem interna */
 .instagram-card {
   height: 500px;
   max-height: 500px;
@@ -154,6 +157,7 @@ html {
   background: #ffffff;
 }
 
+/* 3. Estiliza a barra de rolagem para ficar discreta */
 .instagram-card::-webkit-scrollbar {
   width: 6px;
 }
@@ -170,6 +174,26 @@ html {
 
 .instagram-card::-webkit-scrollbar-thumb:hover {
   background: #a1a1aa;
+}
+
+/* Setas e Paginação do Swiper */
+.swiper-button-next, .swiper-button-prev {
+  color: #000 !important;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #A3B239 !important;
 }
 
 /* =========================

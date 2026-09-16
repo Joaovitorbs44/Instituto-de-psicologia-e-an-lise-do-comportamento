@@ -14,13 +14,13 @@
       <span class="text-[#9aaa00]">respeitando sua história, seu tempo e seus objetivos.</span>
     </p>
 
-    <div class="flex flex-col sm:flex-row gap-4">
-      <a href="#" class="flex justify-center items-center gap-2 text-sm text-white font-medium px-8 py-3 rounded-lg hover:opacity-90 transition bg-gradient-to-r from-[#687237] to-[#d1e254]">
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <a href="https://wa.me/554391639815" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-2 text-sm text-white font-medium px-6 sm:px-7 md:px-8 py-3 rounded-lg hover:opacity-90 transition bg-gradient-to-r from-[#687237] to-[#d1e254]">
         <?= icon('share', 16, 'text-white') ?>
         Agendar consulta
       </a>
 
-      <a href="#" class="flex justify-center items-center gap-2 text-sm text-[#9aaa00] font-medium px-8 py-3 rounded-lg border border-[#9aaa00] hover:bg-[#9aaa0020] transition bg-white">
+      <a href="#sobre" class="flex justify-center items-center gap-2 text-sm text-[#9aaa00] font-medium px-6 sm:px-7 md:px-8 py-3 rounded-lg border border-[#9aaa00] hover:bg-[#9aaa0020] transition bg-white">
         <?= icon('eye', 16, 'text-[#9aaa00]') ?>
         Conheça a clínica
       </a>

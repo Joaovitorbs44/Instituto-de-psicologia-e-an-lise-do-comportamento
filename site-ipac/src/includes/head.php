@@ -22,6 +22,7 @@ $menu = require __DIR__ . '/../config/menu.php';
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 >
 
+<script src="/assets/js/posts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Embed oficial do Instagram -->

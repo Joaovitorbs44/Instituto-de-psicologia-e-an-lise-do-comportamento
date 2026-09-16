@@ -139,61 +139,148 @@ html {
    INSTAGRAM
 ========================= */
 
-/* 1. Força o iframe a ocupar a largura total e não colapsar a altura */
-.instagram-card iframe.instagram-media {
-  min-width: 100%;
-  max-width: 100%;
-  width: 100%;
-  min-height: 1400px;
-  /* Altura mínima necessária pro Instagram renderizar a legenda */
-  margin: 0;
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
 }
 
-/* 2. Trava a altura do card no carrossel e libera a rolagem interna */
+.instagramSwiper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.instagramSwiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.instagramSwiper .swiper-slide {
+    height: auto;
+    min-width: 0;
+}
+
 .instagram-card {
-  height: 500px;
-  max-height: 500px;
-  overflow-y: auto;
-  background: #ffffff;
+    width: 100%;
+    height: 500px;
+
+    background: #ffffff;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    position: relative;
 }
 
-/* 3. Estiliza a barra de rolagem para ficar discreta */
+/* Blockquote antes do Instagram carregar */
+
+.instagram-card .instagram-media {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+}
+
+/* Iframe criado pelo Instagram */
+
+.instagram-card iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
 .instagram-card::-webkit-scrollbar {
-  width: 6px;
+    width: 5px;
 }
 
 .instagram-card::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 8px;
+    background: #f4f4f5;
 }
 
 .instagram-card::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
-  border-radius: 8px;
+    background: #d4d4d8;
+    border-radius: 10px;
 }
 
 .instagram-card::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
+    background: #a1a1aa;
 }
 
-/* Setas e Paginação do Swiper */
-.swiper-button-next, .swiper-button-prev {
-  color: #000 !important;
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+/* =========================
+   SWIPER NAVIGATION
+========================= */
+
+.instagramSwiper .swiper-button-next,
+.instagramSwiper .swiper-button-prev {
+    color: #000 !important;
+
+    background: #ffffff;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+    z-index: 20;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 12px !important;
-  font-weight: 600;
+.instagramSwiper .swiper-button-next::after,
+.instagramSwiper .swiper-button-prev::after {
+    font-size: 14px !important;
+    font-weight: 600;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: #A3B239 !important;
+
+/* =========================
+   PAGINAÇÃO
+========================= */
+
+.instagramSwiper .swiper-pagination {
+    bottom: 5px !important;
+}
+
+.instagramSwiper .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+}
+
+.instagramSwiper .swiper-pagination-bullet-active {
+    background: #A3B239 !important;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .instagram-card {
+        height: 480px;
+    }
+
+    .instagramSwiper .swiper-button-next,
+    .instagramSwiper .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+    }
+
 }
 
 /* =========================

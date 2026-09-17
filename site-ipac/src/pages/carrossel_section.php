@@ -16,7 +16,7 @@ $instagram_posts = [
             Conteúdo & Saúde Mental
         </span>
 
-        <h3 class="sm:text-[16px] md:text-[20px] lg:text-[24px] text-black font-cormorant text-center">
+        <h3 class="text-[22px] min-[375px]:text-[24px] min-[425px]:text-[26px] md:text-[28px] lg:text-[24px] xl:text-[28px] text-black font-cormorant text-center leading-tight">
             Informação de qualidade para o
             <span class="text-[#9aaa00]">seu bem-estar.</span>
         </h3>

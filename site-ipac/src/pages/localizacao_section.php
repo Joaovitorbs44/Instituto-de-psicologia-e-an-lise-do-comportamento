@@ -26,16 +26,7 @@
         Localização & Acesso
       </span>
 
-      <h3 class="text-[22px]
-                 min-[375px]:text-[24px]
-                 min-[425px]:text-[26px]
-                 md:text-[28px]
-                 lg:text-[24px]
-                 min-[1440px]:text-[28px]
-                 text-black
-                 font-cormorant
-                 text-center
-                 leading-tight">
+      <h3 class="text-[22px] min-[375px]:text-[24px] min-[425px]:text-[26px] md:text-[28px] lg:text-[24px] xl:text-[28px] text-black font-cormorant text-center leading-tight">
 
         Estamos perto de você,
         <span class="text-[#9aaa00]">

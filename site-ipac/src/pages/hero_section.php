@@ -4,7 +4,7 @@
 
   <div class="relative z-10 flex flex-col justify-center gap-5 sm:gap-6 md:gap-8 px-5 sm:px-6 md:px-10 lg:px-12 xl:px-20 2xl:px-32 py-16 sm:py-20 md:py-24 lg:py-24">
 
-    <h3 class="text-[22px] min-[375px]:text-[24px] min-[425px]:text-[26px] md:text-[28px] text-black text-center font-cormorant leading-tight max-w-lg">
+    <h3 class="text-[22px] min-[375px]:text-[24px] min-[425px]:text-[26px] md:text-[28px] text-black font-cormorant leading-tight max-w-lg">
       Entenda seus comportamentos.
       <span class="text-[#9aaa00]">Transforme sua relação com você mesmo.</span>
     </h3>
